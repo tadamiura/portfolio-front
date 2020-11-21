@@ -10,7 +10,7 @@ html, body {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   text-align: start;
-  margin : 5em 30em 5em 3em;
+  margin : 5em 50% 5em 80px;
   h1 {
     font-size: 34px;
   }
@@ -52,11 +52,10 @@ html, body {
   }
 }
 .project-list {
-  margin: 0 3em;
+  margin: 0 40px;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   place-content: center;
-  grid-gap: 20px;
   gap: 20px;
   figure{
     border-radius: 10px;

@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import {Link} from 'react-router-dom'
 import axios from 'axios'
 
 const ProjectList = () => {
@@ -17,10 +18,12 @@ const ProjectList = () => {
             <div className='project-list'>
                 {projects.map((project) => 
                     <div class='project-info-container' key={project.id}>
-                        <figure>
-                            <img src={project.project_img} alt={project.project_title}/>
-                            <figcaption>{project.project_title}</figcaption>
-                        </figure>
+                        <Link key={project.id} to='project' className='project-link'>
+                            <figure>
+                                <img src={project.project_img} alt={project.project_title}/>
+                                <figcaption>{project.project_title}</figcaption>
+                            </figure>
+                        </Link>
                     </div>
                 )}
             </div>

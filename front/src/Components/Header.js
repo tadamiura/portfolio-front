@@ -14,7 +14,7 @@ const Header = () => {
     return aboutMe === null
         ? <p>Loading</p>
         : (
-            <div className='about-me-dashboard'>
+            <div className='header'>
                 {aboutMe.map((me) => 
                     <div key={me.id}>
                         <h1 className="my-firstname">{me.firstname}</h1>

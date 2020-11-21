@@ -6,7 +6,7 @@ const Header = () => {
 
     const getAboutMe = () => {
         axios.get('http://localhost:8080/api/about-me')
-            .then((res) => setAboutMe(res.data) || console.log(res.data))
+            .then((res) => setAboutMe(res.data))
     }
 
     useEffect(() => getAboutMe(), [])
@@ -17,8 +17,8 @@ const Header = () => {
             <div className='header'>
                 {aboutMe.map((me) => 
                     <div key={me.id}>
-                        <h1 className="my-firstname">{me.firstname}</h1>
-                        <h2 className="my-lastname">{me.lastname}</h2>
+                        <h1 className="my-firstname">{me.firstname} {me.lastname}</h1>
+                        <h2 className="my-lastname">{me.title}</h2>
                         <h3 className="my-description">{me.description}</h3>
                     </div>
                 )}

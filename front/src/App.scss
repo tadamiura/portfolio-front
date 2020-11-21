@@ -1,6 +1,5 @@
 html, body {
   background-color: #021b39;
-  color: aliceblue;
 }
 .header {
   display: block;
@@ -100,6 +99,47 @@ html, body {
     background-color: #a8a9e7;
     border-radius: 0 0 15px 15px;
   }
-  
 }
 
+.container-getProject {
+  background: #FFF;
+  padding: 25px 0;
+  text-align: start;
+  margin-left: 1em;
+  .container-project {
+    padding: 1% 10% 1% 3%;
+    margin: 3% 25% 3% 25%;
+    background-color: rgba(226, 219, 251, 0.467);
+    text-align: start;
+    border-radius: 15px;
+    box-shadow: 5px 5px 5px #ebebf6;
+    figure {
+      margin: 0;
+      // text-align: center;
+      h4, h5, figcaption {
+        text-align: start;
+        margin: 15px 0;
+      }
+      img {
+        width: auto;
+        height: 150px;
+      }
+      a {
+        text-decoration: none;
+        color: #000000;
+        svg {
+          margin: 0 5px
+        }
+      }
+      figcaption {
+        font-style: italic;
+      }
+    }
+  }
+  .container-project:hover {
+    transform: scale(1.05);
+        transition: all 1200ms;
+        filter:none;
+  }
+
+}

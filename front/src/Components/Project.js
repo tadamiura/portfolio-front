@@ -1,4 +1,6 @@
 import React, { useState, useEffect} from 'react'
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import { faGithub } from "@fortawesome/free-brands-svg-icons"
 import axios from 'axios'
 
 const Project = () => {
@@ -16,12 +18,17 @@ const Project = () => {
     <p>Loading</p>
     :(
         <div className='container-getProject'>
-            {projects.map( projects =>
-            <div className='container-project' key={projects.id}>
-                <h2 className='project-name'>{projects.project_title}</h2>
-                <p className='project-description'>Créé le : {projects.description}</p>
-                <p className='project-stack'>{projects.stack}</p>
-                <p className='project-date'>Durée du projet : {projects.creation_date}</p>
+            {projects.map( project =>
+            <div className='container-project' key={project.id}>
+                <h3>{project.project_title}</h3>
+                <figure>
+                    <img src={project.project_img} alt={project.project_title}/>
+                    <h4>{project.project_stack}</h4>
+                    <h5><a href={project.project_github} target='blank'><FontAwesomeIcon icon={faGithub} size="2x" />Voir le lien Github</a></h5>
+                    <h5><a href={project.project_link} target='blank'>{project.project_link}</a></h5>    
+                    <h5>créé le : {project.project_creation_date}</h5>
+                    <figcaption>{project.project_description}</figcaption>
+                </figure>
             </div>
                  )}
         </div>

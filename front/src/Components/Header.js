@@ -19,6 +19,7 @@ const Header = () => {
                     <div key={me.id}>
                         <h1 className="my-firstname">{me.firstname} {me.lastname}</h1>
                         <h2 className="my-lastname">{me.title}</h2>
+                        <span className="subtitle">{me.subtitle}</span>
                         <h3 className="my-description">{me.description}</h3>
                     </div>
                 )}

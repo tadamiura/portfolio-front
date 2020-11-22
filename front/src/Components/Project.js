@@ -28,9 +28,11 @@ const Project = () => {
             </Link>
             {projects.map( project =>
             <div className='container-project' key={project.id}>
-                <h3>{project.project_title}</h3>
                 <figure>
-                    <img src={project.project_img} alt={project.project_title}/>
+                    <div>
+                        <h3>{project.project_title}</h3>
+                        <img src={project.project_img} alt={project.project_title}/>
+                    </div>
                     <h4>{project.project_stack}</h4>
                     <h5><a href={project.project_github} target='blank'><FontAwesomeIcon icon={faGithub} size="2x" />Voir le lien Github</a></h5>
                     <h5><a href={project.project_link} target='blank'>{project.project_link}</a></h5>    

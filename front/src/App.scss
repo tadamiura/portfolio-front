@@ -1,7 +1,23 @@
+@font-face {
+  font-family: 'old-standard-regular';
+  src: url('./fonts/OldStandardTT-Regular.ttf')
+}
+
+@font-face {
+  font-family: 'old-standard-bold';
+  src: url('./fonts/OldStandardTT-Bold.ttf')
+}
+
+@font-face {
+  font-family: 'old-standard-italic';
+  src: url('./fonts/OldStandardTT-Italic.ttf')
+}
+
 html, body {
   background-color: #021b39;
 }
 .header {
+  font-family: 'old-standard-regular';
   display: flex;
   visibility: visible;
   opacity: 1;
@@ -14,12 +30,15 @@ html, body {
     margin: 4em;
     width: 50%;
     h1 {
+      font-family: 'old-standard-bold';
       font-size: 34px;
     }
     h2 {
+      font-family: 'old-standard-regular';
       font-size: 32px;
     }
     h3 {
+      font-family: 'old-standard-italic';
       font-size: 18px;
       font-style: italic;
     }
@@ -51,6 +70,7 @@ html, body {
 }
 
 .footer {
+  font-family: 'old-standard-regular';
   display: block;
   visibility: visible;
   opacity: 1;
@@ -58,7 +78,7 @@ html, body {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   text-align: center;
-  margin : 30px auto;
+  margin : 50px auto;
   ul {
     font-weight: 300;
     list-style: none;
@@ -84,6 +104,7 @@ html, body {
   }
 }
 .project-list {
+  font-family: 'old-standard-bold';
   margin: 0 80px;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -135,6 +156,7 @@ html, body {
 }
 
 .container-getProject {
+  font-family: 'old-standard-regular';
   background: #FFF;
   padding: 25px 0;
   text-align: start;
@@ -165,7 +187,8 @@ html, body {
       position: relative;
     }
     .btn-two span {
-      font-size: 10px;
+      font-family: 'old-standard-bold';
+      font-size: 9px;
       z-index: 2;	
       display: block;
       position: absolute;
@@ -220,6 +243,16 @@ html, body {
     figure {
       margin: 0;
       // text-align: center;
+      div {
+        display: flex;
+        margin: 30px 0;
+        justify-content: space-between;
+        h3 {
+          align-self: center;
+          margin: 0 10px 0 0;
+          text-align: start;
+          font-size: 20px;        }
+      }
       h4, h5, figcaption {
         text-align: start;
         margin: 15px 0;
@@ -245,5 +278,4 @@ html, body {
         transition: all 1200ms;
         filter:none;
   }
-
 }

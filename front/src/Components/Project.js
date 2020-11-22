@@ -1,6 +1,7 @@
 import React, { useState, useEffect} from 'react'
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faGithub } from "@fortawesome/free-brands-svg-icons"
+import { Link } from 'react-router-dom'
 import axios from 'axios'
 
 const Project = () => {
@@ -16,8 +17,15 @@ const Project = () => {
 
     return projects === null ?   
     <p>Loading</p>
-    :(
+    :(  
         <div className='container-getProject'>
+            <Link className="back-dashboard" to="/">
+            <div class="box-2">
+                <div class="btn btn-two">
+                <span>RETOUR</span>
+                </div>
+            </div>
+            </Link>
             {projects.map( project =>
             <div className='container-project' key={project.id}>
                 <h3>{project.project_title}</h3>
@@ -30,7 +38,7 @@ const Project = () => {
                     <figcaption>{project.project_description}</figcaption>
                 </figure>
             </div>
-                 )}
+            )}
         </div>
     )
 }

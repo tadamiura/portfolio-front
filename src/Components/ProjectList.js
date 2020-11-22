@@ -6,7 +6,7 @@ const ProjectList = () => {
     const [projects, setProjects] = useState(null)
 
     const getProjects = () => {
-        axios.get('http://localhost:8080/api/projects')
+        axios.get('/api/projects')
             .then((res) => setProjects(res.data))
     }
 

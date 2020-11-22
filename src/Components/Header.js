@@ -7,7 +7,7 @@ const Header = () => {
     const [aboutMe, setAboutMe] = useState(null)
 
     const getAboutMe = () => {
-        axios.get('http://localhost:8080/api/about-me')
+        axios.get('/api/about-me')
             .then((res) => setAboutMe(res.data))
     }
 

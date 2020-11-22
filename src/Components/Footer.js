@@ -10,7 +10,7 @@ const Footer = () => {
     const [links, setLinks] = useState(null)
 
     const getLinks = () => {
-        axios.get('http://localhost:8080/api/about-me/links')
+        axios.get('/api/about-me/links')
             .then((res) => setLinks(res.data))
     }
 

@@ -16,7 +16,9 @@ const Project = () => {
         useEffect(() => getProjects(), [])
 
     return projects === null ?   
-    <p>Loading</p>
+    (
+      <div className='loader' />
+    )
     :(  
         <div className='container-getProject'>
             <Link className="back-dashboard" to="/">

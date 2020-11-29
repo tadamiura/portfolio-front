@@ -16,6 +16,23 @@
 html, body {
   background-color: #021b39;
 }
+
+.loader {
+  height: 100px;
+  width: 100px;
+  border: 8px solid #ffc3ca;
+  border-right-color: #a8a9e7;
+  border-radius: 100%;
+  animation: rotate 1s infinite linear;
+  margin: auto;
+}
+
+@keyframes rotate {
+  100% {
+    -webkit-transform: rotate(360deg);
+  }
+}
+
 .header {
   font-family: 'old-standard-regular';
   display: flex;

@@ -17,7 +17,9 @@ const Footer = () => {
     useEffect(() => getLinks(), [])
 
     return links === null ?
-    <div>Loading ...</div>
+    (
+        <div className='loader' />
+    )
     :
     (
         <div className='footer'>

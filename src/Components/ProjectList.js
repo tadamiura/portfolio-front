@@ -12,8 +12,10 @@ const ProjectList = () => {
 
     useEffect(() => getProjects(), [])
 
-    return projects === null
-        ? <p>Loading</p>
+    return projects === null ? 
+        (
+            <div className='loader' />
+        )
         : (
             <div className='project-list'>
                 {projects.map((project) => 

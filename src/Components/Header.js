@@ -14,7 +14,9 @@ const Header = () => {
     useEffect(() => getAboutMe(), [])
 
     return aboutMe === null
-        ? <p>Loading</p>
+        ? (
+            <div className='loader' />
+          )
         : (
             <div className='header'>
                 {aboutMe.map((me) => 

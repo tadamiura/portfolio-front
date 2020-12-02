@@ -18,7 +18,7 @@ const Project = (props) => {
 
     return projects === null ?   
     (
-      <div className='loader' />
+      <div className='loaderComponent' />
     )
     :(  
         <div className='container-getProject'>

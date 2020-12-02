@@ -9,7 +9,7 @@ function App() {
     <div className="App">
       <Switch>
         <Route exact path="/" component={Dashboard}/>
-        <Route path="/project" component={Project}/>
+        <Route path='/project/:id' render={(props) => <Project {...props} />}/>
       </Switch>
     </div>
   );

@@ -13,6 +13,7 @@ const Project = (props) => {
                 .then((res) => setProjects(res.data))
         }
     
+        // eslint-disable-next-line
         useEffect(() => getProjects(), [])
 
     return projects === null ?   

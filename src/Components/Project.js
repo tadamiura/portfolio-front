@@ -4,12 +4,12 @@ import { faGithub } from "@fortawesome/free-brands-svg-icons"
 import { Link } from 'react-router-dom'
 import axios from 'axios'
 
-const Project = () => {
+const Project = (props) => {
 
         const [projects, setProjects] = useState(null)
-    
+
         const getProjects = () => {
-            axios.get(`/api/projects`)
+            axios.get(`/api/projects/${props.match.params.id}`)
                 .then((res) => setProjects(res.data))
         }
     
@@ -22,27 +22,25 @@ const Project = () => {
     :(  
         <div className='container-getProject'>
             <Link className="back-dashboard" to="/">
-            <div class="box-2">
-                <div class="btn btn-two">
+            <div className="box-2">
+                <div className="btn btn-two">
                 <span>RETOUR</span>
                 </div>
             </div>
             </Link>
-            {projects.map( project =>
-            <div className='container-project' key={project.id}>
+            <div className='container-project'>
                 <figure>
                     <div>
-                        <h3>{project.project_title}</h3>
-                        <img src={project.project_img} alt={project.project_title}/>
+                        <h3>{projects.project_title}</h3>
+                        <img src={projects.project_img} alt={projects.project_title}/>
                     </div>
-                    <h4>{project.project_stack}</h4>
-                    <h5><a href={project.project_github} target='blank'><FontAwesomeIcon icon={faGithub} size="2x" />Voir le lien Github</a></h5>
-                    <h5><a href={project.project_link} target='blank'>{project.project_link}</a></h5>    
-                    <h5>créé le : {project.project_creation_date}</h5>
-                    <figcaption>{project.project_description}</figcaption>
+                    <h4>{projects.project_stack}</h4>
+                    <h5><a href={projects.project_github} target='blank'><FontAwesomeIcon icon={faGithub} size="2x" />Voir le lien Github</a></h5>
+                    <h5><a href={projects.project_link} target='blank'>{projects.project_link}</a></h5>    
+                    <h5>créé le : {projects.project_creation_date}</h5>
+                    <figcaption>{projects.project_description}</figcaption>
                 </figure>
             </div>
-            )}
         </div>
     )
 }

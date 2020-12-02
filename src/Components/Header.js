@@ -15,7 +15,7 @@ const Header = () => {
 
     return aboutMe === null
         ? (
-            <div className='loader' />
+            <div className='loaderComponent' />
           )
         : (
             <div className='header'>

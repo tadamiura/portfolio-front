@@ -15,7 +15,7 @@ const ProjectList = () => {
 
     return projects === null ? 
         (
-            <div className='loader' />
+            <div className='loaderComponent' />
         )
         : (
             <div className='project-list'>

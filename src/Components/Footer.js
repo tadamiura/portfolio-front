@@ -18,7 +18,7 @@ const Footer = () => {
 
     return links === null ?
     (
-        <div className='loader' />
+        <div className='loaderComponent' />
     )
     :
     (

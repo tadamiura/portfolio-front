@@ -1,0 +1,116 @@
+
+.container-getProject {
+    min-height: 100vh;
+    font-family: 'old-standard-regular';
+    background: #FFF;
+    padding: 25px 0;
+    text-align: start;
+
+    .back-dashboard {
+      position: fixed;
+      .box-2 {
+        width: 100%; 
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+        .box-2 { background-color: transparent; 
+        }
+        .btn {
+            line-height: 39px;
+            height: 35px;
+            text-align: center;
+            width: 100px;
+            margin: 40px 5px 0 30px;
+            cursor: pointer;
+            }
+        .btn-two {
+            color: #021b39;
+            transition: all 0.5s;
+            position: relative;
+        }
+        .btn-two span {
+            font-family: 'old-standard-bold';
+            font-size: 9px;
+            z-index: 2;	
+            display: block;
+            position: absolute;
+            width: 100%;
+            height: 100%;	
+        }
+        .btn-two::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 1;
+            transition: all 0.5s;
+            border: 1px solid #021b394d;
+            background-color: rgba(68, 32, 228, 0.1);
+            border-radius: 15px;
+        }
+        .btn-two::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 1;
+            transition: all 0.5s;
+            border: 1px solid rgba(68, 32, 228, 0.2);
+            background-color: rgba(68, 32, 228, 0.1);
+            border-radius: 15px;
+        }
+        .btn-two:hover::before {
+            transform: rotate(-45deg);
+            background-color: rgba(255,255,255,0);
+        }
+        .btn-two:hover::after {
+            transform: rotate(45deg);
+            background-color: rgba(255,255,255,0);
+        }
+    }
+
+    .container-project {
+        margin: 5% 70px 3% 150px;
+        figure {
+            text-align: center;
+            h3 {
+                font-size: 2em;
+                font-weight: 900;
+            }
+            img {
+                width: 70%;
+                height: auto;
+                border-radius: 20px;
+                box-shadow: 1px 1px 1px 1px #80808014;
+            }
+            h4, h5, figcaption {
+                font-size: 1.3em;
+                text-align: start;
+            }
+            h5 a {
+                text-decoration: none;
+                color: initial;
+                svg {
+                margin: 0 5px
+                }
+            }
+        }
+    }
+}
+  
+@media only screen  and (max-width: 575.98px) {
+    .back-dashboard {
+        position: initial!important;
+    }
+    .container-project {
+        margin: 0 auto!important;
+        img {
+            width: 90%!important;
+        }
+    }
+}

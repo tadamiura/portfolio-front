@@ -1,0 +1,46 @@
+.footer {
+    font-family: 'old-standard-regular';
+    display: block;
+    visibility: visible;
+    opacity: 1;
+    background: linear-gradient(#ffc3ca,#a8a9e7);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-align: center;
+    margin: 50px 10px 50px 10px;
+    // position: fixed;
+    // bottom: 0;
+    // width: 100%;
+    ul {
+      font-weight: 300;
+      list-style: none;
+      border-top: 10px;
+      padding: 0;
+      .email {
+        font-weight: 900;
+      }
+      .logo-container {
+        display: flex;
+        place-content: center;
+        margin: 15px;
+        li {
+          margin: 15px;
+          svg {
+            color: #ffc3ca
+          }
+        }
+        li:hover {
+          transform: scale(1.30);
+          transition: all 1200ms;
+        }
+      }
+    }
+  }
+
+//   @media only screen and (max-width: 1200px) and (min-width: 870px) {
+//     .footer {
+//        position: initial;
+//        width: initial;
+//        bottom: initial;
+//     }
+//   }

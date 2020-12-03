@@ -51,4 +51,23 @@
       }
     }
   }
-  
+
+  @media only screen and (max-width: 870px) {
+   .header {
+       display: block;
+       .my-stack-container {
+           margin: 4em auto;
+           .my-stack:hover {
+                transform: none;
+                transition: none;
+              }
+       }
+   }
+  } 
+  @media only screen  and (max-width: 575.98px) {
+    .my-stack-container {
+        grid-template-columns: repeat(2, 145px)!important;
+        grid-template-rows: repeat(6, 145px);
+
+    }
+  }

@@ -1,0 +1,54 @@
+
+.header {
+    font-family: 'old-standard-regular';
+    display: flex;
+    visibility: visible;
+    opacity: 1;
+    background: linear-gradient(#ffc3ca,#a8a9e7);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-align: start;
+    // margin : 5em 50% 5em 80px;
+    .about-me-container {
+      margin: 4em;
+      width: 50%;
+      h1 {
+        font-family: 'old-standard-bold';
+        font-size: 34px;
+      }
+      h2 {
+        font-family: 'old-standard-regular';
+        font-size: 32px;
+      }
+      h3 {
+        font-family: 'old-standard-italic';
+        font-size: 18px;
+        font-style: italic;
+      }
+    }
+    .my-stack-container{
+      margin: 4em;
+      width: 50%;
+      color: #fbe9eb;
+      display:grid;
+      gap: 10px;
+      grid-template-columns: repeat(3, 125px);
+      grid-template-rows: repeat(4, 125px);
+      place-content: center;
+      text-align: center;
+      .my-stack {
+        align-self: center;
+        border: 1px solid #fbe9eb4d;
+        padding: 10px 0;
+        border-radius: 15px;
+        .stack-name {
+          margin: 5px;
+        }
+      }
+      .my-stack:hover {
+        transform: scale(2);
+        transition: all 200ms;
+      }
+    }
+  }
+  

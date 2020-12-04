@@ -35,11 +35,12 @@ const Project = (props) => {
                         <h3>{projects.project_title}</h3>
                         <img src={projects.project_img} alt={projects.project_title}/>
                     </div>
-                    <h4>{projects.project_stack}</h4>
-                    <h5><a href={projects.project_github} target='blank'><FontAwesomeIcon icon={faGithub} size="2x" />Voir le lien Github</a></h5>
-                    <h5><a href={projects.project_link} target='blank'>{projects.project_link}</a></h5>    
-                    <h5>créé le : {projects.project_creation_date}</h5>
                     <figcaption>{projects.project_description}</figcaption>
+                    {projects.project_stack ? <h4>{projects.project_stack}</h4> : ''}
+                    {projects.project_github ? <h5><a href={projects.project_github} target='blank'><FontAwesomeIcon icon={faGithub} size="2x" />Voir le lien Github</a></h5> : ''}
+                    {projects.project_github_front !== null ? <h5><a href={projects.project_github_front} target='blank'><FontAwesomeIcon icon={faGithub} size="2x" />Pour le front-end</a></h5> : ''}
+                    {projects.project_link ? <h5><a href={projects.project_link} target='blank'>{projects.project_link}</a></h5> : ''} 
+                    <h5>créé le : {projects.project_creation_date}</h5>
                 </figure>
             </div>
         </div>

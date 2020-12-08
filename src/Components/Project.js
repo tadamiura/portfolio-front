@@ -22,13 +22,13 @@ const Project = (props) => {
     )
     :(  
         <div className='container-getProject'>
-            {/* <Link className="back-dashboard" to="/">
+            <Link className="back-dashboard" to="/">
             <div className="box-2">
                 <div className="btn btn-two">
                 <span>RETOUR A L'ACCUEIL</span>
                 </div>
             </div>
-            </Link> */}
+            </Link>
             <div className='container-project'>
                 <figure>
                     <div className='primary-img'>

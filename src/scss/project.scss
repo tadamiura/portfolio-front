@@ -1,3 +1,4 @@
+@import './variables';
 
 .container-getProject {
     min-height: 100vh;
@@ -7,21 +8,21 @@
     text-align: start;
 
     .back-dashboard {
-      position: fixed;
+    //   position: fixed;
       .box-2 {
         width: 100%; 
         display: flex;
-        justify-content: center;
+        justify-content: start;
         align-items: center;
       }
         .box-2 { background-color: transparent; 
         }
         .btn {
-            line-height: 39px;
-            height: 35px;
+            line-height: 58px;
+            height: 55px;
             text-align: center;
-            width: 100px;
-            margin: 40px 5px 0 30px;
+            width: 350px;
+            margin: 100px 5px 100px 30px;
             cursor: pointer;
             }
         .btn-two {
@@ -31,7 +32,7 @@
         }
         .btn-two span {
             font-family: 'old-standard-bold';
-            font-size: 9px;
+            font-size: 25px;
             z-index: 2;	
             display: block;
             position: absolute;
@@ -75,27 +76,53 @@
     }
 
     .container-project {
-        margin: 5% 70px 3% 150px;
+        margin: 5% 0;
         figure {
-            text-align: center;
-            h3 {
-                font-size: 2em;
-                font-weight: 900;
+            margin: 0;
+            .primary-img {
+                text-align: center;
+                .img-desktop {
+                    width: 100%;
+                    height: auto;
+                    margin-bottom: 30px;
+                }
             }
-            img {
-                width: 70%;
-                height: auto;
-                border-radius: 20px;
-            }
-            h4, h5, figcaption {
-                font-size: 1.3em;
-                text-align: start;
-            }
-            h5 a {
-                text-decoration: none;
-                color: initial;
-                svg {
-                margin: 0 5px
+            .description {
+                margin: 0 auto;
+                width: 40%;
+                max-width: 1280px;
+                .title {
+                    border-bottom: 1px solid $primary-background-color;
+                    font-weight: 600;
+                    color: $primary-background-color;
+                }
+                h3 {
+                    margin-top: 20px;
+                    font-size: 2em;
+                    font-weight: 900;
+                    color: $primary-background-color;
+                }
+                .img-mobile-container {
+                    display: flex;
+                    justify-content: space-evenly;
+                    img {
+                        border: 1px solid #f5f5f5;
+                    }
+                }
+                h4, h5, figcaption {
+                    font-size: 1.3em;
+                    text-align: start;
+                    font-weight: 400;
+                }
+                figcaption {
+                    font-style: italic;
+                }
+                h5 a {
+                    text-decoration: none;
+                    color: initial;
+                    svg {
+                    margin: 0 5px
+                    }
                 }
             }
         }

@@ -22,25 +22,34 @@ const Project = (props) => {
     )
     :(  
         <div className='container-getProject'>
-            <Link className="back-dashboard" to="/">
+            {/* <Link className="back-dashboard" to="/">
             <div className="box-2">
                 <div className="btn btn-two">
-                <span>RETOUR</span>
+                <span>RETOUR A L'ACCUEIL</span>
                 </div>
             </div>
-            </Link>
+            </Link> */}
             <div className='container-project'>
                 <figure>
-                    <div>
-                        <h3>{projects.project_title}</h3>
-                        <img src={projects.project_img} alt={projects.project_title}/>
+                    <div className='primary-img'>
+                        <img className='img-desktop' src={projects.project_img} alt={projects.project_title}/>
                     </div>
-                    <figcaption>{projects.project_description}</figcaption>
-                    {projects.project_stack ? <h4>{projects.project_stack}</h4> : ''}
-                    {projects.project_github ? <h5><a href={projects.project_github} target='blank'><FontAwesomeIcon icon={faGithub} size="2x" />Voir le lien Github</a></h5> : ''}
-                    {projects.project_github_front !== null ? <h5><a href={projects.project_github_front} target='blank'><FontAwesomeIcon icon={faGithub} size="2x" />Pour le front-end</a></h5> : ''}
-                    {projects.project_link ? <h5><a href={projects.project_link} target='blank'>{projects.project_link}</a></h5> : ''} 
-                    <h5>créé le : {projects.project_creation_date}</h5>
+                    <div className='description'>
+                        <h3>{projects.project_title}</h3>
+                        <h4 className='title'>Le projet</h4>
+                        <figcaption>{projects.project_description}</figcaption>
+                        <h4 className='title'>La stack technique</h4>
+                        {projects.project_stack ? <h4>{projects.project_stack}</h4> : ''}
+                        {projects.project_img_mobile_1 || projects.project_img_mobile_2 ? <h4 className='title'>Les visuels</h4> : ""}
+                        <div className="img-mobile-container">
+                            {projects.project_img_mobile_1 ? <img src={projects.project_img_mobile_1} alt={projects.project_title}/> : ""}
+                            {projects.project_img_mobile_2 ? <img src={projects.project_img_mobile_2} alt={projects.project_title}/> : ""}
+                        </div>
+                        {projects.project_github || projects.project_github_front || projects.project_link ? <h4 className='title'>Les liens</h4> : ""}
+                        {projects.project_github ? <h5><a className='img-mobile' href={projects.project_github} target='blank'><FontAwesomeIcon icon={faGithub} size="2x" />Voir le lien Github</a></h5> : ''}
+                        {projects.project_github_front ? <h5><a href={projects.project_github_front} target='blank'><FontAwesomeIcon icon={faGithub} size="2x" />Pour le front-end</a></h5> : ''}
+                        {projects.project_link ? <h5><a href={projects.project_link} target='blank'>{projects.project_link}</a></h5> : ''} 
+                    </div>
                 </figure>
             </div>
         </div>

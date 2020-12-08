@@ -26,7 +26,7 @@ const ProjectList = () => {
                         className='project-link'
                         >
                             <figure>
-                                <img src={project.project_img} alt={project.project_title}/>
+                                <img className='project-list-img' src={project.project_img} alt={project.project_title}/>
                                 <figcaption>{project.project_title}</figcaption>
                             </figure>
                         </Link>

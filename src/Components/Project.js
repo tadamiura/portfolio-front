@@ -1,8 +1,9 @@
 import React, { useState, useEffect} from 'react'
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faGithub } from "@fortawesome/free-brands-svg-icons"
-import { Link } from 'react-router-dom'
+import { NavLink } from 'react-router-dom'
 import axios from 'axios'
+import Header from './Header'
 
 const Project = (props) => {
 
@@ -10,9 +11,9 @@ const Project = (props) => {
 
         const getProjects = () => {
             axios.get(`/api/projects/${props.match.params.id}`)
-                .then((res) => setProjects(res.data))
+            .then((res) => setProjects(res.data))
         }
-    
+
         // eslint-disable-next-line
         useEffect(() => getProjects(), [])
 
@@ -22,13 +23,11 @@ const Project = (props) => {
     )
     :(  
         <div className='container-getProject'>
-            <Link className="back-dashboard" to="/">
-            <div className="box-2">
-                <div className="btn btn-two">
-                <span>RETOUR A L'ACCUEIL</span>
-                </div>
-            </div>
-            </Link>
+            <span className='project-header'>
+                <NavLink to={`/`}>
+                    <Header />
+                </NavLink>
+            </span>
             <div className='container-project'>
                 <figure>
                     <div className='primary-img'>

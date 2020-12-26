@@ -1,9 +1,16 @@
 @import './variables';
 
+
+.project-header {
+    a{
+        text-decoration: none;
+    }
+}
+
 .container-getProject {
     min-height: 100vh;
     font-family: 'old-standard-regular';
-    background: #FFF;
+    background: $primary-background-color;
     padding: 25px 0;
     text-align: start;
 
@@ -76,6 +83,8 @@
     }
 
     .container-project {
+        background: #FFF;
+        padding-bottom: 5%;
         margin: 5% 0;
         figure {
             margin: 0;

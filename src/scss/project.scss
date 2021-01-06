@@ -1,16 +1,18 @@
 @import './variables';
 
-
-.project-header {
-    a{
-        text-decoration: none;
-    }
-}
-
 .container-getProject {
+    .close{
+        float: right;
+        margin: 20px;
+        color: $primary-background-color;
+        text-decoration: none;
+        svg {
+            font-size: 3em;
+        }
+    }
     min-height: 100vh;
     font-family: 'old-standard-regular';
-    background: $primary-background-color;
+    background: #FFF;
     padding: 25px 0;
     text-align: start;
 
@@ -140,6 +142,11 @@
 }
 
 @media only screen and (min-device-width : 1024px) and (max-device-width : 1224px) {
+    .close{
+        svg{
+            font-size: 2em!important;
+        }
+    }
     .description {
         width: 80%!important;
     }
@@ -149,6 +156,11 @@
 }
 
 @media only screen and (min-device-width : 768px) and (max-device-width : 1024px) {
+    .close{
+        svg{
+            font-size: 2em!important;
+        }
+    }
     .btn {
         height: 45px!important;
         width: 250px!important;
@@ -163,6 +175,11 @@
 }
 
 @media only screen  and (max-width: 768px) {
+    .close{
+        svg{
+            font-size: 1em!important;
+        }
+    }
     .btn {
         height: 25px!important;
         width: 150px!important;

@@ -1,9 +1,9 @@
 import React, { useState, useEffect} from 'react'
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faGithub } from "@fortawesome/free-brands-svg-icons"
-import { NavLink } from 'react-router-dom'
+import { faTimesCircle } from '@fortawesome/free-solid-svg-icons'
+import { Link } from 'react-router-dom'
 import axios from 'axios'
-import Header from './Header'
 
 const Project = (props) => {
 
@@ -23,11 +23,10 @@ const Project = (props) => {
     )
     :(  
         <div className='container-getProject'>
-            <span className='project-header'>
-                <NavLink to={`/`}>
-                    <Header />
-                </NavLink>
-            </span>
+            <Link
+            to={'/'}>
+                <span className='close'><FontAwesomeIcon icon={faTimesCircle} size="2x"/></span>
+            </Link>
             <div className='container-project'>
                 <figure>
                     <div className='primary-img'>
